@@ -8,7 +8,9 @@ function destructivelyUpdateObjectWithKeyAndValue(object, key, value) {
 }
 
 function deleteFromObjectByKey(object, key) {
-
+  var newObject = Object.assigc({}, object);
+  delete newObject[key];
+  return newObject;
 }
 
 function destructivelyDeleteFromObjectByKey(object, key) {
